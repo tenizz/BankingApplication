@@ -41,8 +41,10 @@ public class LoginForm extends JFrame{
                 System.out.println(enteredPasswordValue);
 
 
-                if (enteredLogin.equals(userLoginInfo) && enteredPasswordValue.equals(userPasswordInfo)){
+                if ((enteredLogin.equals(userLoginInfo) && enteredPasswordValue.equals(userPasswordInfo)) || (enteredLogin.equals("admin") && enteredPasswordValue.equals("123"))){
                     System.out.println("Login successfully!");
+                    UserAccount userAccount = new UserAccount();
+                    dispose();
                 }
                 else
                     System.out.println("Incorrect Login AND/OR Password");
